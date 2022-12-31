@@ -13,7 +13,7 @@ def main():
             print("Not Weird")
         if (6 <= n <= 20):
             print("Weird")
-        else:
+        elif (n > 20):
             print("Not Weird")
     else:  # if n is odd
         print("Weird")
