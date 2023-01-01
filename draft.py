@@ -1,6 +1,12 @@
-n = int(input())
+def is_leap(year):
+    leap = False
 
-if (3 <= n):
-    print("yes")
-else:
-    print("no")
+    # Write your logic here
+    if year % 4 == 0:
+        leap = True
+
+    return leap
+
+
+year = int(input())
+print(is_leap(year))
