@@ -20,10 +20,31 @@ class Student(Person):
     #
     # Write your constructor here
 
+    def __init__(self, firstName, lastName, id, scores):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.idNumber = id
+        self.scores = scores
+
     #   Function Name: calculate
     #   Return: A character denoting the grade.
     #
     # Write your function here
+
+    def calculate(self):
+        a = sum(self.scores)/len(self.scores)
+        if 90 <= a <= 100:
+            return "O"
+        elif 80 <= a < 90:
+            return "E"
+        elif 70 <= a < 80:
+            return "A"
+        elif 55 <= a < 70:
+            return "P"
+        elif 40 <= a < 55:
+            return "D"
+        else:
+            return "T"
 
 
 line = input().split()
