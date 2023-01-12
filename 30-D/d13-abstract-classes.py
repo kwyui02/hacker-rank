@@ -12,6 +12,17 @@ class Book(object, metaclass=ABCMeta):
 # Write MyBook class
 
 
+class MyBook(Book):
+    def __init__(self, title, author, price):
+        self.title = title
+        self.author = author
+        self.price = price
+
+    def display(self):
+        print("Title: {title}\nAuthor: {author}\nPrice: {price}".format(
+            title=self.title, author=self.author, price=self.price))
+
+
 title = input()
 author = input()
 price = int(input())
